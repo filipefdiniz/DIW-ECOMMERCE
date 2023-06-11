@@ -89,9 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    async function arrayproducts(url) {
-
-    }
 
     fetchProducts('https://diwserver.vps.webdock.cloud/products?page={}');
 });
@@ -168,7 +165,7 @@ fetchProductDetails(productId);
 
 function pagina(productId) {
     // redirecionar para pagina do produto
-    window.location.href = `/detalhes.html?id=${productId}`;
+    window.location.href = `detalhes.html?id=`+productId;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -178,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButton.addEventListener('click', () => {
         //botão de pesquisa
         const searchTerm = inputSearch.value.toLowerCase();
-        window.location.href = `/pesquisa.html?search=${encodeURIComponent(searchTerm)}`;
+        window.location.href = `pesquisa.html?search=` +encodeURIComponent(searchTerm);
         // Redireciona para a página de pesquisa com o termo buscado no input
     });
 });
@@ -267,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function redirectToProductPage(productId) {
-        window.location.href = `/detalhes.html?id=${productId}`;
+        window.location.href = `detalhes.html?id=`+ productId;
     }
 });
 
@@ -407,6 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   searchButton.addEventListener('click', () => {
       const searchTerm = inputSearch.value.toLowerCase();
-      window.location.href = `/pesquisa.html?search=${encodeURIComponent(searchTerm)}`;
+      window.location.href = `/pesquisa.html?search=` +encodeURIComponent(searchTerm);
   });
 });
