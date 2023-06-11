@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="style">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="nav-bar">
+        <a href="index.html"><img src="logo.png" alt="logo" class="logo"></a>
+        <div class="nav-list">
+        <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="pesquisa.html">Search</a></li>
+            <li class="nav-item"><a href="produtos.html">Products</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
+        </ul>
+        </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="menu-icon.png" alt=""></button>
+        </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="pesquisa.html">Search</a></li>
+            <li class="nav-item"><a href="produtos.html">Products</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <form class="filtro">
+        <h3>QUICK FILTER</h3>
+        <h4>Category:</h4>
+        <div class="categ">
+          <select name="categ" id="categ">
+            
+          </select>
+        </div>
+        <button class="category-btn">Filter</button>
+      </form>
+      
+   
+    <div class="produtos-grid"></div>
+    </div>
+
+    <footer class="rodape">
+        <div class="rod1">
+        <h4 style="color: rgb(0, 0, 0); text-decoration: none; padding-bottom: 20px;">PAYMENT METHODS</h4>
+        <i class="bi bi-paypal" style="color: black; font-size: 30px; padding: 10px;"></i>
+        <i class="bi bi-credit-card-2-back-fill" style="color: black; font-size: 30px;padding: 10px;"></i>
+        <i class="bi bi-credit-card" style="color: black; font-size: 30px;padding: 10px;"></i><br>
+        <i class="bi bi-cash" style="color: black; font-size: 30px;padding: 10px;"></i>
+        <i class="bi bi-cash-coin" style="color: black; font-size: 30px;padding: 10px;"></i>
+        <i class="bi bi-credit-card-2-back-fill" style="color: black; font-size: 30px;padding: 10px;"></i>
+        </div>
+        <div class="rod2">
+            <div class="news">
+                <h3>Newlsetter</h3>
+                <p class="news-p">Subscribe for promotions!</p>
+                <hr>
+                <input type="text" class="news-letter" placeholder="Subscribe">
+                <button type="submit" class="news-b">Send</button>
+            </div>
+        </div>
+        <div class="rod3">
+            <h4><strong>Aluno:</strong> Filipe Ferreira Diniz</h4>
+            <p><strong>Matrícula:</strong> 813272</p>
+            <p><strong>Disciplina:</strong> Desenvolvimento de Interfaces Web</p>
+            <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+            <p><strong>PUC Minas São Gabriel</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

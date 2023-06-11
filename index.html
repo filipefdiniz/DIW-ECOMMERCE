@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css" class="style">
+    <title>Document</title>
+</head>
+<body class="home-body">
+    <header class="cabecalho">
+        <nav class="nav-bar">
+        <a href="index.html"><img src="logo.png" alt="logo" class="logo"></a>
+        <div class="divSearch" id="search-pc">
+            <input type="search" id="searchInput" placeholder="Search Products..">
+            <button id="searchButton">Buscar</button>
+        </div>
+        <div class="nav-list">
+        <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="pesquisa.html">Search</a></li>
+            <li class="nav-item"><a href="produtos.html">Products</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
+        </ul>
+        </div>
+        <div class="mobile-menu-icon">
+            <button onclick="menuShow()"><img class="icon" src="menu-icon.png" alt=""></button>
+        </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="pesquisa.html">Search</a></li>
+            <li class="nav-item"><a href="produtos.html">Products</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
+            </ul>
+            <div class="divSearch" id="search-mobile">
+                <input type="search" id="searchInput" placeholder="Search Products..">
+                <button id="searchButton">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <h3 class="frase">PRODUCTS WITH 35% OFF THIS MONTH!</h3>
+    <section class="row form">
+      <div class="col-sm-12 col-lg-12 col-md-12 cor2" style="margin-top: 20px; padding:10px 50px;">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="slide1.jpg" class="d-block w-100" alt="slide1" style="object-fit: cover; height: 350px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="slide2.jpg" class="d-block w-100" alt="..." style="object-fit: cover; height: 350px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="slide3.png" class="d-block w-100" alt="..." style="object-fit: cover; height: 350px;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+      </section>
+    <div class="container">
+        
+        
+        <div class="products">
+            
+        </div>
+        <aside class="lateral-menu">
+
+        </aside>
+    </div>
+    <footer class="rodape">
+        <div class="rod1">
+        <h4 style="color: rgb(0, 0, 0); text-decoration: none; padding-bottom: 20px; font-weight: bold;">PAYMENT METHODS</h4>
+        <i class="bi bi-paypal" style="color: black; font-size: 30px; padding: 10px;"></i>
+        <i class="bi bi-credit-card-2-back-fill" style="color: black; font-size: 30px;padding: 10px;"></i>
+        <i class="bi bi-credit-card" style="color: black; font-size: 30px;padding: 10px;"></i><br>
+        <i class="bi bi-cash" style="color: black; font-size: 30px;padding: 10px;"></i>
+        <i class="bi bi-cash-coin" style="color: black; font-size: 30px;padding: 10px;"></i>
+        <i class="bi bi-credit-card-2-back-fill" style="color: black; font-size: 30px;padding: 10px;"></i>
+        </div>
+        <div class="rod2">
+            <div class="news">
+                <h3>Newlsetter</h3>
+                <p class="news-p">Subscribe for promotions!</p>
+                <hr>
+                <input type="text" class="news-letter" placeholder="Subscribe">
+                <button type="submit" class="news-b">Send</button>
+            </div>
+        </div>
+        <div class="rod3">
+            <h4><strong>Aluno:</strong> Filipe Ferreira Diniz</h4>
+            <p><strong>Matrícula:</strong> 813272</p>
+            <p><strong>Disciplina:</strong> Desenvolvimento de Interfaces Web</p>
+            <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+            <p><strong>PUC Minas São Gabriel</strong></p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const inputSearch = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    searchButton.addEventListener('click', () => {
+        const searchTerm = inputSearch.value.toLowerCase();
+        window.location.href = `/pesquisa.html?search=${encodeURIComponent(searchTerm)}`;
+    });
+});
+
+    </script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+</body>
+</html>
