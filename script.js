@@ -398,12 +398,4 @@ function menuShow(){
         menuMobile.classList.add('open');
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
-  const inputSearch = document.getElementById("searchInput");
-  const searchButton = document.getElementById("searchButton");
 
-  searchButton.addEventListener('click', () => {
-      const searchTerm = inputSearch.value.toLowerCase();
-      window.location.href = `/pesquisa.html?search=` +encodeURIComponent(searchTerm);
-  });
-});
