@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="product-rate-search">Rate: ${product.rating.rate} (${product.rating.count} Reviews) </p>
                 <div class="product-price-container-search">
                   <h3 class="product-price-search">$ ${formattedPrice}</h3>
-                  <p class="product-description-search">${descricao.length > 20 ? descricao.substring(0, 150).concat(' <strong>...more</strong>') : descricao}</p><br>
+                  <p class="product-description-search">${descricao.length > 5 ? descricao.substring(0, 100).concat(' <strong>...more</strong>') : descricao}</p><br>
                   <a href="#!" data-productId="${product.id}" class="see-product">See Product</a>
                 </div>
               </div>

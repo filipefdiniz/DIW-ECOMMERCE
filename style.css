@@ -284,6 +284,7 @@ body{
         display: flex;
         margin: 5px 5px;
         flex-wrap: wrap;
+        width: 200px;
     }
     .uppart{
         display: flex;
@@ -317,6 +318,7 @@ body{
         display: flex;
         display: grid;
         grid-template-columns: 1fr;
+        
 
     }
     .lateral-menu{
@@ -343,6 +345,11 @@ body{
         display: grid;
         grid-template-columns: 1fr;
 
+    }
+    .product-search{
+        width: 100%; /* ocupará todo o espaço disponível */
+        padding: 10px;
+        box-sizing: border-box;
     }
     
 }
@@ -485,9 +492,8 @@ body{
     padding-left: 50px;
     border-radius: 10px;
     margin-top: 50px;
-    flex-direction: column;
-
-
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .product-search:hover{
     cursor: pointer;
