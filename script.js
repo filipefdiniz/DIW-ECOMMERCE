@@ -168,7 +168,7 @@ fetchProductDetails(productId);
 
 function pagina(productId) {
     // redirecionar para pagina do produto
-    window.location.href = `detalhes.html?id=${productId}`;
+    window.location.href = `/detalhes.html?id=${productId}`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
