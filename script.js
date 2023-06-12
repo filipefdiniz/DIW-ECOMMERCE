@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let title = response.products[i].title;
                 products.innerHTML += `
-          <div class="product">
-            <img src="${response.products[i].image}" alt="" class="product-img" onclick="pagina(${response.products[i].id})">
+          <div class="product" onclick="pagina(${response.products[i].id})">
+            <img src="${response.products[i].image}" alt="" class="product-img" >
             <h2 class="product-title">${title.length > 20 ? title.substring(0, 20).concat('...') : title}</h2>
             <p class="product-rate">${ratingHTML}</p>
             <div class="product-price-container">
