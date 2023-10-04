@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // aguarda o DOM carregar
-
+    try{
     async function fetchProducts(url) {
         // buscar produtos na API
-
-        let products = document.querySelector('.products');
+        
+        let productos1 = document.getElementById('#products');
         let lateral = document.querySelector('.lateral-menu');
         let currentPage = 1;
         let totalPages = 1;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 let title = response.products[i].title;
-                products.innerHTML += `
+                productos1.innerHTML += `
           <div class="product" onclick="pagina(${response.products[i].id})">
             <img src="${response.products[i].image}" alt="" class="product-img" >
             <h2 class="product-title">${title.length > 20 ? title.substring(0, 20).concat('...') : title}</h2>
@@ -90,7 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    fetchProducts('https://diwserver.vps.webdock.cloud/products?page={}');
+    fetchProducts('https://fakestoreapi.com/products?limit=5');
+  }
+  catch{
+    console.log(error);
+  }
 });
 
 // Página do produto
@@ -100,7 +104,7 @@ let productPage = document.querySelector('.product-details');
 
 async function fetchProductDetails(productId) {
 
-    let response = await fetch(`https://diwserver.vps.webdock.cloud/products/${productId}`);
+    let response = await fetch(`https://fakestoreapi.com/products?=${productId}`);
     let productData = await response.json();
     var ratingHTML = '';
 
@@ -189,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector('.content');
     let produtos = []; 
 
-    fetch('https://diwserver.vps.webdock.cloud/products')
+    fetch('https://fakestoreapi.com/products')
         .then((res) => res.json())
         .then((data) => {
             produtos = data.products;
@@ -333,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    fetchProductsall('https://diwserver.vps.webdock.cloud/products?page={}');
+    fetchProductsall('https://fakestoreapi.com/products?page={}');
 
     document.querySelector('.category-btn').addEventListener('click', function(event) {
         event.preventDefault(); 
@@ -344,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Função para filtrar os produtos por categoria
 async function filterProductsByCategory() {
-    let pageUrl = 'https://diwserver.vps.webdock.cloud/products?page={}';
+    let pageUrl = 'https://fakestoreapi.com/products?page={}';
 
     let data = await fetch(pageUrl);
     let response = await data.json();
@@ -398,4 +402,8 @@ function menuShow(){
         menuMobile.classList.add('open');
     }
 }
+
+
+
+
 
